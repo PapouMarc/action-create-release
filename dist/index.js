@@ -7047,7 +7047,7 @@ var ExitCode;
  */
 function exportVariable(name, val) {
     process.env[name] = val;
-    command_1.issueCommand('set-env', { name }, val);
+    command_1.issueCommand('setEnv', { name }, val);
 }
 exports.exportVariable = exportVariable;
 /**
@@ -7057,7 +7057,7 @@ exports.exportVariable = exportVariable;
  */
 function exportSecret(name, val) {
     exportVariable(name, val);
-    command_1.issueCommand('set-secret', {}, val);
+    command_1.issueCommand('setSecret', {}, val);
 }
 exports.exportSecret = exportSecret;
 /**
@@ -7091,7 +7091,7 @@ exports.getInput = getInput;
  * @param     value    value to store
  */
 function setOutput(name, value) {
-    command_1.issueCommand('set-output', { name }, value);
+    command_1.issueCommand('setOutput', { name }, value);
 }
 exports.setOutput = setOutput;
 //-----------------------------------------------------------------------
